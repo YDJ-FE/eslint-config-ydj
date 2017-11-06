@@ -1,0 +1,49 @@
+{
+  "name": "eslint-config-ydj",
+  "version": "0.0.1",
+  "description": "yidejia's ESLint config, following our styleguide",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "prepublish": "(in-install || eslint-find-rules -u -n) && (not-in-publish || npm test) && safe-publish-latest",
+    "pretest": "npm run --silent lint",
+    "travis": "cd ../eslint-config-yidejia-base && npm install && npm link && cd - && npm link eslint-config-yidejia-base && npm run --silent test ; npm unlink eslint-config-yidejia-base >/dev/null &",
+    "test": "echo test completed! "
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "yidejia",
+    "javascript",
+    "styleguide"
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^4.10.0",
+    "eslint-find-rules": "^3.1.1",
+    "eslint-plugin-import": "^2.8.0",
+    "in-publish": "^2.0.0",
+    "safe-publish-latest": "^1.0.1"
+  },
+  "peerDependencies": {
+    "eslint": "^4.10.0",
+    "eslint-plugin-import": "^2.8.0"
+  },
+  "engines": {
+    "node": ">= 6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YDJ-FE/eslint-config-ydj.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YDJ-FE/eslint-config-ydj/issues"
+  },
+  "homepage": "https://github.com/YDJ-FE/eslint-config-ydj#readme",
+  "directories": {
+    "test": "test"
+  },
+  "author": ""
+}
