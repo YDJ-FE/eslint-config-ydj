@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "prepublish": "(in-install || eslint-find-rules -u -n) && (not-in-publish || npm test) && safe-publish-latest",
     "pretest": "npm run --silent lint",
     "travis": "cd ../eslint-config-yidejia-base && npm install && npm link && cd - && npm link eslint-config-yidejia-base && npm run --silent test ; npm unlink eslint-config-yidejia-base >/dev/null &",
     "test": "echo test completed! "
